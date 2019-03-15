@@ -31,7 +31,7 @@ else:
     DEBUG = True
 
 
-ALLOWED_HOSTS = ['vetafrik.herokuapp.com']
+ALLOWED_HOSTS = ['disquaire.herokuapp.com']
 
 
 # Application definition
