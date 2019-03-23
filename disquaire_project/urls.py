@@ -1,4 +1,5 @@
 """disquaire_project URL Configuration
+
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
 Examples:
@@ -19,13 +20,13 @@ from django.contrib import admin
 from store import views
 
 urlpatterns = [
-    url(r'^$', views.index,name='index'),
-    url(r'^store/', include('store.urls' , namespace='store')),
-    url(r'^capitaine/', admin.site.urls)
+    url(r'^$', views.index, name="index"),
+    url(r'^store/', include('store.urls', namespace='store')),
+    url(r'^admin/', admin.site.urls)
 ]
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls)),
-] + urlpatterns
+    ] + urlpatterns

@@ -27,9 +27,8 @@ class Album(models.Model):
     created_at = models.DateTimeField('date de création', auto_now_add=True)
     available = models.BooleanField('disponible', default=True)
     title = models.CharField('titre', max_length=200)
-    picture = models.URLField()
+    picture = models.TextField("URL de l'image", )
     artists = models.ManyToManyField(Artist, related_name='albums', blank=True)
-
 
     class Meta:
         verbose_name = "disque"

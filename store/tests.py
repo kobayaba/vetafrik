@@ -1,5 +1,5 @@
 from django.test import TestCase
-from django.urls import reverse
+from django.core.urlresolvers import reverse
 
 from .models import Album, Artist, Contact, Booking
 
@@ -90,4 +90,4 @@ class BookingPageTestCase(TestCase):
         })
         # Make the query again, otherwise `available` will still be set at `True`
         self.album.refresh_from_db()
-		self.assertFalse(self.album.available) 
+        self.assertFalse(self.album.available)
